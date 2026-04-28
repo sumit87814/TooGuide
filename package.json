@@ -17,7 +17,7 @@
   "license": "ISC",
   "author": "sumit",
   "type": "commonjs",
-  "main": "app.js",
+
   "scripts": {
     "test": "jest"
   },
