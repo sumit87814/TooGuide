@@ -1,0 +1,27 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "description": "This is react related work",
+  "keywords": [
+    "react",
+    "sumit"
+  ],
+  "homepage": "https://github.com/sumit87814/TooGuide#readme",
+  "bugs": {
+    "url": "https://github.com/sumit87814/TooGuide/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumit87814/TooGuide.git"
+  },
+  "license": "ISC",
+  "author": "sumit",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  }
+}
