@@ -1,10 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
 
-const heading = React.createElement("h1", { id: "heading" }, "Hello react sumit");
+const Heading = () => {
+    return <h1 id="title"> This is the first component </h1>;
+};
 
-console.log(heading); //object
+//react functional component
+// using function inside a function is called composition of function
+const Hello = () => {
+  return(  
+    <div>
+      {"injecting java script inside html"}
+   
+      <Heading />
+    <h1> 2ns function with 1st function inside it </h1>
+    </div>
+    );
+};
+
+
+console.log(<Heading/>); //object
 
 const root= ReactDOM.createRoot(document.getElementById("title"));
-root.render(heading);
-    
+root.render(<Hello/>);
