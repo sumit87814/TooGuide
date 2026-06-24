@@ -1,44 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-
-
-const Header=()=>{
-    return(
-      <div className="header">
-        <div className="logo-container">
-      <img className="logo" src="https://images-platform.99static.com/PqkxPzdIGHYlwJzMzFSLbWCaI0g=/0x0:1181x1181/500x500/top/smart/99designs-contests-attachments/134/134197/attachment_134197839" alt="" />
-        </div>
-        <div className="nav-items"> 
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-          </ul>
-          </div>
-        </div>
-    );
-};
-
-const styleCard = {
-  backgroundColor: "grey"
-};
-const RestaurantCard = (props) => {
-  const { resData } = props;
-    return(
-      <div className="res-card" style={styleCard}>
-        <img className="res-logo"
-          src={"https://media-assets.swiggy.com/swiggy/image/upload/"+ resData.info.cloudinaryImageId} alt="Biryani image" />
-        <h3>{ resData.info.name }</h3>
-        <h3>{ resData.info.cuisines.join(", ") }</h3>
-        <h3>{ resData.info.avgRating } Starts</h3>
-        <h3>{resData.info.sla.deliveryTime} minutes</h3>
-        <h3>{resData.info.costForTwo}</h3>
-        <h3>{resData.info.aggregatedDiscountInfoV3.header}</h3>
-        </div>
-    );
-};
-
 const resObj = {
   "restaurants": [
                     {
@@ -296,27 +255,4 @@ const resObj = {
                   ]
 }
 
-const Body=()=>{
-    return(
-      <div className="body">
-        <div className="search">Search</div>
-        <div className="res-container">
-        {resObj.restaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-          ))}
-        </div>
-      </div>
-    );
-}
-
-const AppLayout=()=>{
-    return(
-      <div className="app">
-        <Header />
-        <Body />
-        </div>
-    );
-};
-
-const root= ReactDOM.createRoot(document.getElementById("title"));
-root.render(<AppLayout/>);
+export default resObj;
