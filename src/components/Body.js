@@ -1,6 +1,7 @@
 import resObj from "../utils/mockData.js";
 import RestaurantCard from "./Restaurentcard.js";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer.js";
 
 const Body = () => {
   const [listofRestaurents, setListofRestaurents] = useState([]);
@@ -20,8 +21,12 @@ const fetchData = async () => {
     json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
 
   setListofRestaurents(restaurants || []);
-};
 
+};
+//conditional rendering
+  if (listofRestaurents.length === 0) {
+    return <Shimmer/>;
+  }
 
     return(
       <div className="body">
